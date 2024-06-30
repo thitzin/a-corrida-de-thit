@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.game-board {
+  width: 100%;
+  height: 500px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(#79a9ce, #5690b9);
+}
+
+.thit {
+  position: absolute;
+  width: 0px;
+  bottom: 0;
+  image-rendering: pixelated;
+}
+
+.paradothit {
+  position: absolute;
+  width: 150px;
+  bottom: 0;
+  image-rendering: pixelated;
+}
+
+.espinho {
+  position: absolute;
+  bottom: 0;
+  right: -550px;
+  width: 80px;
+  image-rendering: pixelated;
+}
+
+.pulo {
+  animation: pulo 500ms ease-out;
+}
+
+.jogar1 {
+  animation: animadoespinho 1.5s infinite linear;
+}
+
+.menu {
+  position: absolute;
+  width: 850px;
+  right: 85px;
+  bottom: 0px;
+}
+
+.gameover {
+  position: absolute;
+  left: 125px;
+  bottom: -145px;
+  width: 0;
+}
+
+@keyframes animadoespinho {
+  from {
+    right: -79px;
+  }
+
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes pulo {
+  0% {
+    bottom: 0;
+  }
+  
+  40% {
+    bottom: 180px;
+  }
+
+  50% {
+    bottom: 180px;
+  }
+
+  60% {
+    bottom: 150px;
+  }
+
+  100% {
+    bottom: 0;
+  }
+}
